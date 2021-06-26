@@ -1,0 +1,19 @@
+{
+    "languages": {
+        "en": "Inglês",
+        "pt": "Português"
+    },
+    "screens": {
+        "Home": {
+            "ListHeader": {
+                "title": "Partidas agendadas"
+            }
+        }
+    },
+    "components": {
+        "Profile": {
+            "greeting": "Olá,",
+            "message": "Hoje é dia de vitória!"
+        }
+    }
+}

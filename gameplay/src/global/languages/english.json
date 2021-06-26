@@ -1,0 +1,19 @@
+{
+    "languages": {
+        "en": "English",
+        "pt": "Portuguese"
+    },
+    "screens": {
+        "Home": {
+            "ListHeader": {
+                "title": "Scheduled matches"
+            }
+        }
+    },
+    "components": {
+        "Profile": {
+            "greeting": "Hi,",
+            "message": "Today is a victory day!"
+        }
+    }
+}
