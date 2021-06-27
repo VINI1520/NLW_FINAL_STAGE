@@ -8,6 +8,22 @@
             "ListHeader": {
                 "title": "Partidas agendadas"
             }
+        },
+        "ProfileMenu": {
+            "title": "Menu Perfil",
+            "quit": "Sair"
+        },
+        "AppointmentCreate": {
+            "Header": {
+                "title": "Agendar partida"
+            },
+            "category": "Categoria",
+            "selectserver": "Selecione um servidor",
+            "daymonth": "Dia e mês",
+            "hourminute": "Hora e minuto",
+            "description": "Descrição",
+            "maxcharacters": "Max 100 caracteres",
+            "buttontitle": "Agendar"
         }
     },
     "components": {

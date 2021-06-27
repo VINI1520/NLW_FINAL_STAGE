@@ -8,6 +8,22 @@
             "ListHeader": {
                 "title": "Scheduled matches"
             }
+        },
+        "ProfileMenu": {
+            "title": "Menu Perfil",
+            "quit": "Quit"
+        },
+        "AppointmentCreate": {
+            "Header": {
+                "title": "Schedule match"
+            },
+            "category": "Category",
+            "selectserver": "Choose a server",
+            "daymonth": "Day and month",
+            "hourminute": "Hour and minute",
+            "description": "Description",
+            "maxcharacters": "Max 100 characters",
+            "buttontitle": "Save"
         }
     },
     "components": {

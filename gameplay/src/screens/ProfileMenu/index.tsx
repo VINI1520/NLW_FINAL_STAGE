@@ -13,7 +13,7 @@ import { Button } from '../../components/Button';
 import { ModalView } from '../../components/ModalView';
 import { Languages } from '../Languages';
 
-import { useTranslate, getAtualLanguage } from '../../hooks/translate'
+import { runTranslate, getAtualLanguage, useTranslate } from '../../hooks/translate'
 
 import { useAuth } from '../../hooks/auth';
 
@@ -53,7 +53,7 @@ export function ProfileMenu() {
     return (
         <Background> 
             <Header 
-                title="Menu Perfil"
+                title={runTranslate("screens.ProfileMenu.title")}
             />
             <View style={styles.container}>
                 <View style={styles.form}>
@@ -82,7 +82,7 @@ export function ProfileMenu() {
             </View>
             <View style={styles.footer}>
                 <Button 
-                    title="Sair" 
+                    title={runTranslate("screens.ProfileMenu.quit")} 
                     onPress={handleOpenLogout}
                     enabled
                 />

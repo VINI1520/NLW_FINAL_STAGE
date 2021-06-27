@@ -28,6 +28,7 @@ import { Header } from '../../components/Header';
 import { Button } from '../../components/Button';
 import { Guilds } from '../Guilds';
 
+import { runTranslate } from '../../hooks/translate'
 
 export function AppointmentCreate(){
   const [category, setCategory] = useState('');
@@ -42,6 +43,8 @@ export function AppointmentCreate(){
   const [description, setDescription] = useState('');
 
   const navigation = useNavigation();
+
+  const labelselectserver = runTranslate("screens.AppointmentCreate.selectserver");
 
   function handleOpenGuilds(){
     setOpenGuildsModal(true);
@@ -103,14 +106,14 @@ export function AppointmentCreate(){
       <Background>
         <ScrollView>  
           <Header 
-            title="Agendar partida"
+            title={runTranslate("screens.AppointmentCreate.Header.title")}
           />
 
           <Text style={[
             styles.label, 
             { marginLeft: 24, marginTop: 36, marginBottom: 18 }]}
           >
-            Categoria
+            {runTranslate("screens.AppointmentCreate.category")}
           </Text>
 
           <CategorySelect 
@@ -133,7 +136,7 @@ export function AppointmentCreate(){
                     { 
                       guild.name 
                       ? guild.name 
-                      : 'Selecione um servidor' 
+                      : labelselectserver
                     }
                   </Text>
                 </View>
@@ -149,7 +152,7 @@ export function AppointmentCreate(){
             <View style={styles.field}>
               <View>
                 <Text style={[styles.label, { marginBottom: 12 } ]}>
-                  Dia e mês
+                  {runTranslate("screens.AppointmentCreate.daymonth")}
                 </Text>
 
                 <View style={styles.column}>
@@ -169,7 +172,7 @@ export function AppointmentCreate(){
 
               <View>
                 <Text style={[styles.label, { marginBottom: 12 } ]}>
-                  Hora e minuto
+                  {runTranslate("screens.AppointmentCreate.hourminute")}
                 </Text>
 
                 <View style={styles.column}>
@@ -190,11 +193,11 @@ export function AppointmentCreate(){
 
             <View style={[styles.field, { marginBottom: 12 }]}>
               <Text style={styles.label}>
-                Descrição
+                {runTranslate("screens.AppointmentCreate.description")}
               </Text>
 
               <Text style={styles.caracteresLimit}>
-                Max 100 caracteres
+                {runTranslate("screens.AppointmentCreate.maxcharacters")}
               </Text>
             </View>
 
@@ -211,7 +214,7 @@ export function AppointmentCreate(){
         </ScrollView>
         <View style={styles.footer}>
               <Button 
-                title="Agendar" 
+                title={runTranslate("screens.AppointmentCreate.buttontitle")} 
                 onPress={handleSave}
                 enabled={showButton}
               />
