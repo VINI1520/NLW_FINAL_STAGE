@@ -24,6 +24,17 @@
             "description": "Descrição",
             "maxcharacters": "Max 100 caracteres",
             "buttontitle": "Agendar"
+        },
+        "AppointmentDetails": {
+            "Header": {
+                "title": "Detalhes"
+            },
+            "ListHeader": {
+                "title": "Jogadores",
+                "subtitle": "Total"
+            },
+            "messagenoplayeronline": "Não há ninguém online agora.",
+            "messagewidget": "Não foi possível ler as informações do servidor da partida."
         }
     },
     "components": {

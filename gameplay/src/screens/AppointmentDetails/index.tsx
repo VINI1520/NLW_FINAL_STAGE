@@ -29,6 +29,8 @@ import { ButtonIcon } from '../../components/ButtonIcon';
 import { Header } from '../../components/Header';
 import { Load } from '../../components/Load';
 
+import { runTranslate } from '../../hooks/translate'
+
 type Params = {
   guildSelected: AppointmentProps
 }
@@ -47,6 +49,11 @@ export function AppointmentDetails() {
 
   const route = useRoute();
   const { guildSelected } = route.params as Params;
+
+  const labelListHeaderTitle = runTranslate("screens.AppointmentDetails.ListHeader.title")
+  const labelListHeadersubtitle = runTranslate("screens.AppointmentDetails.ListHeader.subtitle")
+  const labelmessagewidget = runTranslate("screens.AppointmentDetails.messagewidget")
+  const labelmessagenoplayeronline = runTranslate("screens.AppointmentDetails.messagenoplayeronline")
 
   async function fetchGuildWidget() {
     try {
@@ -94,7 +101,7 @@ export function AppointmentDetails() {
   return (
     <Background>
       <Header
-        title="Detalhes"
+        title={runTranslate("screens.AppointmentDetails.Header.title")}
         action={
           guildSelected.guild.owner &&
           <BorderlessButton onPress={handleShareInvitation}>
@@ -127,8 +134,8 @@ export function AppointmentDetails() {
         showwidget ?
           <>
             <ListHeader
-              title="Jogadores"
-              subtitle={`Total ${widget.members.length ? widget.members.length : 0}`}
+              title={labelListHeaderTitle}
+              subtitle={`${labelListHeadersubtitle} ${widget.members.length ? widget.members.length : 0}`}
             />
             {
               <FlatList
@@ -142,7 +149,7 @@ export function AppointmentDetails() {
                 ListEmptyComponent={() => ( // UPDATE 2#  Um propriedade para renderizar algo quando a lista e vázia.
                   <View style={styles.emptyContainer}>
                     <Text style={styles.emptyText}>
-                      Não há ninguém online agora.
+                      {labelmessagenoplayeronline}
                     </Text>
                   </View>
                 )}
@@ -152,7 +159,7 @@ export function AppointmentDetails() {
           :
           <View style={styles.emptyContainer}>
             <Text style={styles.emptyText}>
-              Não foi possível ler as informações do servidor da partida.
+              {labelmessagewidget}
             </Text>
           </View>
       }

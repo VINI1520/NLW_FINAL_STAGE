@@ -24,6 +24,17 @@
             "description": "Description",
             "maxcharacters": "Max 100 characters",
             "buttontitle": "Save"
+        },
+        "AppointmentDetails": {
+            "Header": {
+                "title": "Details"
+            },
+            "ListHeader": {
+                "title": "Players",
+                "subtitle": "Total"
+            },
+            "messagenoplayeronline": "There is no players online.",
+            "messagewidget": "We couldn't get the information about this server."
         }
     },
     "components": {
